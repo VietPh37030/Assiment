@@ -65,10 +65,15 @@ const CoffeeCard: React.FC<CoffeCardProps> = ({
       <Text style={styles.CardTitle}>{name}</Text>
       <Text style={styles.CardSubTitle}>{special_ingredient}</Text>
       <View style={styles.CardFooterRow}>
-        <Text style={styles.CardPriceCurrency}>
+        <Text style={styles.CardPriceCurrency}>$
         <Text style={styles.CardPrice}>
-          $ <Text >{price.price}</Text>
-          <TouchableOpacity>
+           <Text >{price.price}</Text>
+        </Text>
+       
+        </Text>
+        <TouchableOpacity onPress={()=>{
+
+        }}>
             <BGIcon
               color={COLORS.primaryWhiteHex}
               name={'add'}
@@ -76,8 +81,6 @@ const CoffeeCard: React.FC<CoffeCardProps> = ({
               size={FONTSIZE.size_10}
             />
           </TouchableOpacity>
-        </Text>
-        </Text>
       </View>
     </LinearGradient>
     
@@ -117,9 +120,28 @@ const styles = StyleSheet.create({
     lineHeight:22,
     fontSize:FONTSIZE.size_14,
   },
-  CardFooterRow:{},
-  CardTitle:{},
-  CardSubTitle:{},
-  CardPriceCurrency:{},
-  CardPrice:{},
+  CardFooterRow:{
+    flexDirection:'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    paddingHorizontal:SPACING.space_2,
+  },
+  CardTitle:{
+    fontFamily:FONTFAMILY.poppins_medium,
+    color: COLORS.primaryWhiteHex,
+    fontSize: FONTSIZE.size_14,
+    lineHeight:24,
+
+  },
+  CardSubTitle:{
+    fontFamily:FONTFAMILY.poppins_light,
+    color: COLORS.primaryWhiteHex,
+    fontSize: FONTSIZE.size_10,
+
+  },
+  CardPriceCurrency:{  
+    fontFamily:FONTFAMILY.poppins_semibold,
+    color: COLORS.primaryOrangeHex,
+    fontSize: FONTSIZE.size_18,},
+  CardPrice:{ color: COLORS.primaryWhiteHex,},
 });

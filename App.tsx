@@ -14,7 +14,7 @@ const App = () => {
     <NavigationContainer>
      <Stack.Navigator  screenOptions={{headerShown:false}}>
       <Stack.Screen name='Tab' component={TabNavigation}  options={{animation:'slide_from_bottom'}}></Stack.Screen>
-      <Stack.Screen name='Deilta' component={DeiltaProductsScreen}  options={{animation:'slide_from_bottom'}}></Stack.Screen>
+      <Stack.Screen name='Details' component={DeiltaProductsScreen}  options={{animation:'slide_from_bottom'}}></Stack.Screen>
       <Stack.Screen name='Payment' component={PayScreen}  options={{animation:'slide_from_bottom'}}></Stack.Screen>
      </Stack.Navigator>
     </NavigationContainer>
